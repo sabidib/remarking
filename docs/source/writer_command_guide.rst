@@ -592,6 +592,6 @@ We can also have some fun:
 Next Steps
 ----------
 
-Once you have your new writer command open a pull request as outlined in the `contribution doc <https://github.com/sabidib/remarking/CONTRIBUTING.md>`_ and someone will be pinged for review!
+Once you have your new writer command open a pull request as outlined in the `contribution doc <https://github.com/sabidib/remarking/blob/master/CONTRIBUTING.md>`_ and someone will be pinged for review!
 
 

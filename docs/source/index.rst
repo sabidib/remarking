@@ -164,6 +164,6 @@ Miscellaneous Pages
    :maxdepth: 1
 
    Examples<examples>
-   Contributing<https://www.github.com/sabidib/remarking/CONTRIBUTING.md>
-   License<https://www.github.com/sabidib/remarking/LICENSE.md>
+   Contributing<https://github.com/sabidib/remarking/blob/master/CONTRIBUTING.md>
+   License<https://github.com/sabidib/remarking/blob/master/LICENSE>
 

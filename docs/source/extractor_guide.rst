@@ -233,6 +233,6 @@ Check out the implementation of :class:`remarking.RemarkableHighlightExtractor` 
 Next Steps
 ----------
 
-Once you have designed your new extractor open a pull request as outlined in the `contribution doc <https://www.github.com/sabidib/remarking/CONTRIBUTING.md>`_ and someone will review it!
+Once you have designed your new extractor open a pull request as outlined in the `contribution doc <https://github.com/sabidib/remarking/blob/master/CONTRIBUTING.md>`_ and someone will review it!
 
 
