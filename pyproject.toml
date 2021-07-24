@@ -51,7 +51,6 @@ types-tabulate = "^0.1.1"
 autoflake = "^1.4"
 colorama = "^0.4.4"
 furo = "^2021.7.5-beta.38"
-sphinxcontrib-programoutput = "^0.17"
 
 [build-system]
 requires = [

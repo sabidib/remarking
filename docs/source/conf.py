@@ -35,7 +35,6 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.programoutput',
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode'

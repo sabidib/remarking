@@ -306,16 +306,99 @@ Remember that ``run`` will always output all highlights found and that ``persist
 json
 ****
 
-.. program-output:: remarking run json --help
+.. code-block:: text
+
+   Usage: remarking run json [OPTIONS] [COLLECTION_NAMES]...
+
+     Output highlights and documents as JSON
+
+   Options:
+     -t, --token TEXT                One time auth token from for the reMarkable
+                                     cloud. Needs only be specified once.  [env
+                                     var: REMARKING_TOKEN]
+     -e, --extractors TEXT           Comma delimited list of extractors to use.
+                                     Run `remarking list extractors` to see valid
+                                     extractors.  [default: remarkable]
+     -o, --output FILENAME           Output highlights to the given file
+     -w, --working-directory DIRECTORY
+                                     Working directory where files will be
+                                     downloaded and highlights generated.
+                                     [default: (A randomly generated path within
+                                     /tmp/)]
+     -q, --quiet                     Print nothing.
+     -h, --help                      Show this message and exit.
+
 
 
 csv
 ***
 
-.. program-output:: remarking run csv --help
+.. code-block:: text
+
+   Usage: remarking run csv [OPTIONS] [COLLECTION_NAMES]...
+
+     Output highlights normalized with documents as csv.
+
+     Check out `remarking list columns` for a list of columns to choose from for
+     the `--columns` option.
+
+
+
+   Options:
+     -t, --token TEXT                One time auth token from for the reMarkable
+                                     cloud. Needs only be specified once.  [env
+                                     var: REMARKING_TOKEN]
+     -e, --extractors TEXT           Comma delimited list of extractors to use.
+                                     Run `remarking list extractors` to see valid
+                                     extractors.  [default: remarkable]
+     -o, --output FILENAME           Output highlights to the given file
+     -w, --working-directory DIRECTORY
+                                     Working directory where files will be
+                                     downloaded and highlights generated.
+                                     [default: (A randomly generated path within
+                                     /tmp/)]
+     -q, --quiet                     Print nothing.
+     --delimiter TEXT                Delimiter to use to split columns
+     --columns TEXT                  Comma delimited list of columns to print
+                                     when using plain printing. `remarking list
+                                     columns` shows all available columns
+                                     [default: highlight_text,document_name,highl
+                                     ight_page_number]
+     -h, --help                      Show this message and exit.
 
 
 table
 *****
 
-.. program-output:: remarking run table --help
+.. code-block:: text
+
+   Usage: remarking run table [OPTIONS] [COLLECTION_NAMES]...
+
+     Output highlights normalized with documents as a table.
+
+     Check out `remarking list columns` for a list of columns to choose from for
+     the `--columns` option.
+
+   Options:
+     -t, --token TEXT                One time auth token from for the reMarkable
+                                     cloud. Needs only be specified once.  [env
+                                     var: REMARKING_TOKEN]
+     -e, --extractors TEXT           Comma delimited list of extractors to use.
+                                     Run `remarking list extractors` to see valid
+                                     extractors.  [default: remarkable]
+     -o, --output FILENAME           Output highlights to the given file
+     -w, --working-directory DIRECTORY
+                                     Working directory where files will be
+                                     downloaded and highlights generated.
+                                     [default: (A randomly generated path within
+                                     /tmp/)]
+     -q, --quiet                     Print nothing.
+     --truncate / --no-truncate      Truncate results when printing plain
+     --plain / --no-plain            Output one data entry per line.
+     --columns TEXT                  Comma delimited list of columns to print
+                                     when using plain printing. `remarking list
+                                     columns` shows all available columns
+                                     [default: highlight_text,document_name,highl
+                                     ight_page_number]
+     -h, --help                      Show this message and exit.
+
