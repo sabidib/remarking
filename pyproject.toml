@@ -29,6 +29,8 @@ click = "^8.0.1"
 halo = "^0.0.31"
 tabulate = "^0.8.9"
 click-help-colors = "^0.9.1"
+Sphinx = { version="^4.1.1", optional=true}
+furo = { version="^2021.7.5-beta.38", optional=true}
 
 [tool.poetry.scripts]
 remarking = 'remarking.cli.cli:command_line'
@@ -49,8 +51,6 @@ types-tabulate = "^0.1.1"
 autoflake = "^1.4"
 colorama = "^0.4.4"
 
-Sphinx = { version="^4.1.1", optional=true}
-furo = { version="^2021.7.5-beta.38", optional=true}
 
 [tool.poetry.extras]
 docs = [
