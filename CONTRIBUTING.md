@@ -32,7 +32,7 @@ To set up a development environment, please follow these steps:
 
 4. Enter the poetry virtualenv with `poetry shell`.
 
-5. Get contributing! Check out the [writer command walkthrough](https://remarking.readthedocs.com/writer_command_guide.html) or the [extractor walkthrough](https://remarking.readthedocs.com/extractor_guide.html)
+5. Get contributing! Check out the [writer command walkthrough](https://remarking.readthedocs.io/en/latest/writer_command_guide.html) or the [extractor walkthrough](https://remarking.readthedocs.io/en/latest/extractor_guide.html)
 
 
 ## Issues and feature requests

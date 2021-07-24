@@ -92,7 +92,7 @@ def command_line(ctx: click.Context, verbose: int) -> None:
     persist will only run on documents modified since the last run and will
     only output new highlights. This is useful for syncing with a database.
 
-    For more examples check out the docs at: https://remarking.readthedocs.com/
+    For more examples check out the docs at: https://remarking.readthedocs.io/en/latest/
 
     Learn more with `remarking run --help`
     """
@@ -171,7 +171,7 @@ def persist(ctx: click.Context, sqlalchemy: str) -> None:
     from the reMarkable cloud and processes them to extract highlights. If you ran this command
     again without making changes to the document you would have no new highlights.
 
-    For more examples check out the docs at: https://remarking.readthedocs.com/
+    For more examples check out the docs at: https://remarking.readthedocs.io/en/latest/
 
     Learn more with `remarking persist json --help`
 
@@ -229,7 +229,7 @@ def run(ctx: click.Context) -> None:
     This command produces highlights for all the documents in the book directory
     on the reMarkable cloud.
 
-    For more examples check out the docs at: https://remarking.readthedocs.com/
+    For more examples check out the docs at: https://remarking.readthedocs.io/en/latest/
 
     Learn more with `remarking persist json --help`
     """

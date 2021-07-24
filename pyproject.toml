@@ -5,9 +5,9 @@ description = "Extract highlights from your ReMarkable tablet."
 authors = ["sabidib <samy@sabidib.com>"]
 license = "GPL-3.0-only"
 readme = "README.md"
-homepage = "https://remarking.readthedocs.org"
+homepage = "https://remarking.readthedocs.io/en/latest/"
 repository = "https://www.github.com/sabidib/remarking"
-documentation = "https://remarking.readthedocs.org"
+documentation = "https://remarking.readthedocs.io/en/latest/"
 keywords = [
     "highlight",
     "remarkable-tablet",

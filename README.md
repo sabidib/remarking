@@ -115,7 +115,7 @@ A second run would return no new highlights if the documents in the books folder
 
 ## Examples
 
-You can check out some examples in [the examples section of the docs](https://remarking.readthedocs.com/examples.html).
+You can check out some examples in [the examples section of the docs](https://remarking.readthedocs.io/en/latest/examples.html).
 
 ## Roadmap
 
