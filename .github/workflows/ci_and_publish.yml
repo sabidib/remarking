@@ -1,0 +1,68 @@
+name: CI and Publishing
+on: [push]
+jobs:
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.9, 3.8]
+        poetry-version: [1.1.6]
+        os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - name: Install dependencies
+        run: poetry install
+      - name: run pytest
+        run: poetry run pytest -vvv tests/
+  lint:
+    runs-on: ubuntu-20.04
+    name: "Perform linting"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.1.6
+      - name: Install dependencies
+        run: poetry install
+      - name: run typing
+        run: poetry run scripts/typing
+      - name: run linting
+        run: poetry run scripts/linting
+  publish:
+    needs: [lint, ci]
+    runs-on: ubuntu-20.04
+    name: Publish Python 🐍 distributions 📦 to PyPI
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.1.6
+      - name: Build package
+        run: poetry build
+      - name: Publish distribution 📦 to PyPI
+        if: startsWith(github.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+
+
+
+

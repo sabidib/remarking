@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DEFAULT="remarking/ tests/ scripts/"
+
+
+mypy --ignore-missing-imports ${@:-$DEFAULT}

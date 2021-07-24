@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "remarking"
+version = "0.1.1"
+description = "Extract highlights from your ReMarkable tablet."
+authors = ["sabidib <samy@sabidib.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+homepage = "https://remarking.readthedocs.org"
+repository = "https://www.github.com/sabidib/remarking"
+documentation = "https://remarking.readthedocs.org"
+keywords = [
+    "highlight",
+    "remarkable-tablet",
+    "extract",
+    "annotate workflow"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+SQLAlchemy = "^1.4.20"
+python-dateutil = "^2.8.1"
+rmapy = "0.3.0"
+click = "^8.0.1"
+halo = "^0.0.31"
+tabulate = "^0.8.9"
+click-help-colors = "^0.9.1"
+
+[tool.poetry.scripts]
+remarking = 'remarking.cli.cli:command_line'
+
+[tool.poetry.dev-dependencies]
+SQLAlchemy = {extras = ["mypy"], version = "^1.4.20"}
+GitPython = "^3.1.18"
+autopep8 = "^1.5.7"
+pytest = "^6.2.4"
+pytest-unordered = "^0.4.1"
+pylint-pytest = "^1.1.2"
+pytest-cov = "^2.12.1"
+sphinx-click = "^3.0.1"
+Sphinx = "^4.1.1"
+types-requests = "^2.25.0"
+types-python-dateutil = "^0.1.4"
+pylint = "^2.9.3"
+mypy = "^0.910"
+types-tabulate = "^0.1.1"
+autoflake = "^1.4"
+colorama = "^0.4.4"
+furo = "^2021.7.5-beta.38"
+sphinxcontrib-programoutput = "^0.17"
+
+[build-system]
+requires = [
+    "poetry-core>=1.0.0"
+]
+build-backend = "poetry.core.masonry.api"
+

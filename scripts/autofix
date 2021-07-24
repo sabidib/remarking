@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DEFAULT="remarking tests/ scripts/"
+CHOICE=${@:-$DEFAULT}
+
+autoflake --exclude __init__.py -r -i --remove-all-unused-imports $CHOICE
+isort $CHOICE
+autopep8 -r --in-place $CHOICE

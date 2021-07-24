@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ROOT_PATH=$(git rev-parse --show-toplevel)
+
+echo "Installing git hooks."
+cp $ROOT_PATH/scripts/hooks/pre_push_hook.py $ROOT_PATH/.git/hooks/pre-push
+
