@@ -50,7 +50,7 @@ the process as easy as specifiying the folder to scan for documents.
 ### Requirements
 
 You will need at least:
-  - Python 3.8+
+  - Python 3.7+
   - Pip
 
 

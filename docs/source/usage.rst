@@ -2,7 +2,7 @@
 Installation and Getting Started
 ================================
 
-- Python: 3.8, 3.9
+- Python: 3.7+
 - Platforms: Linux, Windows, MacOS
 - PyPI package name: `remarking <https://pypi.org/project/remarking/>`_
 
