@@ -8,7 +8,7 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
 ## Requirements
 
 For development you will need at least:
-  - Python 3.8+
+  - Python 3.7+
   - pip
   - Poetry
 
