@@ -457,6 +457,14 @@ pylint = "*"
 pytest = ">=4.6"
 
 [[package]]
+name = "pymupdf"
+version = "1.18.15"
+description = "Python bindings for the PDF toolkit and renderer MuPDF"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pyparsing"
 version = "2.4.7"
 description = "Python parsing module"
@@ -541,6 +549,23 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [[package]]
+name = "remarks"
+version = "0.1.0"
+description = "Extract your marks (highlights, scribbles, annotations) and convert them to markdown, pdf, png, and svg. Works with PDFs annotated on reMarkable™ paper tablets."
+category = "main"
+optional = false
+python-versions = "^3.7"
+develop = false
+
+[package.dependencies]
+PyMuPDF = "^1.18.4"
+Shapely = "^1.7.1"
+
+[package.source]
+type = "directory"
+url = "../remarkable-backup/remarks"
+
+[[package]]
 name = "requests"
 version = "2.26.0"
 description = "Python HTTP for Humans."
@@ -560,7 +585,7 @@ use_chardet_on_py3 = ["chardet (>=3.0.2,<5)"]
 
 [[package]]
 name = "rmapy"
-version = "0.3.0"
+version = "0.3.1"
 description = "Remarkable Cloud Api Client"
 category = "main"
 optional = false
@@ -572,6 +597,19 @@ requests = "*"
 
 [package.extras]
 doc = ["sphinx (==2.2.0)", "sphinx-autodoc-typehints (==1.8.0)", "guzzle-sphinx-theme (==0.7.11)"]
+
+[[package]]
+name = "shapely"
+version = "1.7.1"
+description = "Geometric objects, predicates, and operations"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+all = ["numpy", "pytest", "pytest-cov"]
+test = ["pytest", "pytest-cov"]
+vectorized = ["numpy"]
 
 [[package]]
 name = "six"
@@ -867,7 +905,7 @@ docs = ["furo", "Sphinx"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "d702289835a3b6c49dfde728d37e31a9e778b88b75590077e0a1dd36416f6818"
+content-hash = "6d99ed8975f7548032ce62fcc8c83f952fc490f162621b4225088dcaea390899"
 
 [metadata.files]
 alabaster = [
@@ -1203,6 +1241,29 @@ pylint = [
 pylint-pytest = [
     {file = "pylint_pytest-1.1.2-py2.py3-none-any.whl", hash = "sha256:fb20ef318081cee3d5febc631a7b9c40fa356b05e4f769d6e60a337e58c8879b"},
 ]
+pymupdf = [
+    {file = "PyMuPDF-1.18.15-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:b2b9bcae8f719ef96876210934e975f9e46d3ea5a9b1eb9886f562f80155c38a"},
+    {file = "PyMuPDF-1.18.15-cp36-cp36m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:c946f75d844206fb95943d7e270ce7a6b1d46fda7d28c64c60014711f34c6ca4"},
+    {file = "PyMuPDF-1.18.15-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c9b8abc217cdfefaeed433028b6a72e8bf3b3e2a43922d01d6151d550de79e5f"},
+    {file = "PyMuPDF-1.18.15-cp36-cp36m-win32.whl", hash = "sha256:11a921b5f8c8ab4d481f430265f619e6ecfa31b18f4cc5fde3532e6b3c5fcebb"},
+    {file = "PyMuPDF-1.18.15-cp36-cp36m-win_amd64.whl", hash = "sha256:5f10d23f0af1e1a6ab0dfd333cff83a64c9ee1e0a0b1e1d68b299fade3302eaa"},
+    {file = "PyMuPDF-1.18.15-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:751d86ce19e1812e1ede1ffda3dc95ebf8aeac9186e2f24418b459e38da8d9b7"},
+    {file = "PyMuPDF-1.18.15-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:b530b5379f7cdb97eeb1926f2800c2a7e5a58959510270531058b29c955f6b09"},
+    {file = "PyMuPDF-1.18.15-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:222b36a900deaa1acf01efaa2132ccc381d3b553588731bf7c9a874f675918a6"},
+    {file = "PyMuPDF-1.18.15-cp37-cp37m-win32.whl", hash = "sha256:31ec255942195d2e2b84b9c7fb979cff3bfb2944881b2111b8a8d82f3da1b4bb"},
+    {file = "PyMuPDF-1.18.15-cp37-cp37m-win_amd64.whl", hash = "sha256:361c46ad2d49d5e7056516c76dfd991017b521eb22f382226aa9645bb904d98e"},
+    {file = "PyMuPDF-1.18.15-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:0e8ebac249353658823fbda676066f737f5ad4ecbd59d92f59c466c6031147ee"},
+    {file = "PyMuPDF-1.18.15-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:3df07e4148bb8ad1ea33b3de6acd85ddbd701a7e9b778e94267298853406d5c7"},
+    {file = "PyMuPDF-1.18.15-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0f3627ef06519573eb82630f9d6ec09c27743fcb48937ad7e8204f06e560dac4"},
+    {file = "PyMuPDF-1.18.15-cp38-cp38-win32.whl", hash = "sha256:2c3dbc931851a411bf6a4d504558f66b7f508aa45d2f482d4aeff0f2ee001a3f"},
+    {file = "PyMuPDF-1.18.15-cp38-cp38-win_amd64.whl", hash = "sha256:89c2a48682a86eca2e087d307edc6cf49a3729fb1c361339122a4654d9f2c24c"},
+    {file = "PyMuPDF-1.18.15-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:6b5f9f43bcc08047cd223b1727ba965614b7056d9d0f55bb115f8b1472e3210d"},
+    {file = "PyMuPDF-1.18.15-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:133e1d89ae90da8647d9e457de6c813c57598427c39a60f555588611ba9273c9"},
+    {file = "PyMuPDF-1.18.15-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f93ad97f733b0eb234120dd94445961f279f275180296bdeef564592a9c06927"},
+    {file = "PyMuPDF-1.18.15-cp39-cp39-win32.whl", hash = "sha256:71e0cbb15e3f7589e9c61957a39b8b32c21ee25acb6782af015871d38f97c880"},
+    {file = "PyMuPDF-1.18.15-cp39-cp39-win_amd64.whl", hash = "sha256:c781c97aeee7370f77f709cb6afb64d400cf05e4e1b8e16f87251bf0ff16e449"},
+    {file = "PyMuPDF-1.18.15.tar.gz", hash = "sha256:13d4d1e654babfcf2d7feb9233035e6056f7bfece9940c7709f6076436194733"},
+]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
@@ -1258,13 +1319,39 @@ pyyaml = [
     {file = "PyYAML-5.4.1-cp39-cp39-win_amd64.whl", hash = "sha256:c20cfa2d49991c8b4147af39859b167664f2ad4561704ee74c1de03318e898db"},
     {file = "PyYAML-5.4.1.tar.gz", hash = "sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"},
 ]
+remarks = []
 requests = [
     {file = "requests-2.26.0-py2.py3-none-any.whl", hash = "sha256:6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24"},
     {file = "requests-2.26.0.tar.gz", hash = "sha256:b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"},
 ]
 rmapy = [
-    {file = "rmapy-0.3.0-py3-none-any.whl", hash = "sha256:f7ec169dac43c68d6e08be456c2f6329f092be78bbf2653aeb3526df1e151f1f"},
-    {file = "rmapy-0.3.0.tar.gz", hash = "sha256:d12a6504cb9a918c519ed15720028a26553da9b0c44829f07969d85726be23ee"},
+    {file = "rmapy-0.3.1-py3-none-any.whl", hash = "sha256:60b04eb0ce9f8c47a819ec775a1922e813ea4ac380ff77ec91556178563dc169"},
+    {file = "rmapy-0.3.1.tar.gz", hash = "sha256:39664f903c70ac7e04d339a914a9a4e6025746c13196e52daeb6f9c89fff8fe2"},
+]
+shapely = [
+    {file = "Shapely-1.7.1-1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:46da0ea527da9cf9503e66c18bab6981c5556859e518fe71578b47126e54ca93"},
+    {file = "Shapely-1.7.1-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:4c10f317e379cc404f8fc510cd9982d5d3e7ba13a9cfd39aa251d894c6366798"},
+    {file = "Shapely-1.7.1-cp35-cp35m-macosx_10_6_intel.whl", hash = "sha256:17df66e87d0fe0193910aeaa938c99f0b04f67b430edb8adae01e7be557b141b"},
+    {file = "Shapely-1.7.1-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:da38ed3d65b8091447dc3717e5218cc336d20303b77b0634b261bc5c1aa2bae8"},
+    {file = "Shapely-1.7.1-cp35-cp35m-win32.whl", hash = "sha256:8e7659dd994792a0aad8fb80439f59055a21163e236faf2f9823beb63a380e19"},
+    {file = "Shapely-1.7.1-cp35-cp35m-win_amd64.whl", hash = "sha256:791477edb422692e7dc351c5ed6530eb0e949a31b45569946619a0d9cd5f53cb"},
+    {file = "Shapely-1.7.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:e3afccf0437edc108eef1e2bb9cc4c7073e7705924eb4cd0bf7715cd1ef0ce1b"},
+    {file = "Shapely-1.7.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:8f15b6ce67dcc05b61f19c689b60f3fe58550ba994290ff8332f711f5aaa9840"},
+    {file = "Shapely-1.7.1-cp36-cp36m-win32.whl", hash = "sha256:60e5b2282619249dbe8dc5266d781cc7d7fb1b27fa49f8241f2167672ad26719"},
+    {file = "Shapely-1.7.1-cp36-cp36m-win_amd64.whl", hash = "sha256:de618e67b64a51a0768d26a9963ecd7d338a2cf6e9e7582d2385f88ad005b3d1"},
+    {file = "Shapely-1.7.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:182716ffb500d114b5d1b75d7fd9d14b7d3414cef3c38c0490534cc9ce20981a"},
+    {file = "Shapely-1.7.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:4f3c59f6dbf86a9fc293546de492f5e07344e045f9333f3a753f2dda903c45d1"},
+    {file = "Shapely-1.7.1-cp37-cp37m-win32.whl", hash = "sha256:6871acba8fbe744efa4f9f34e726d070bfbf9bffb356a8f6d64557846324232b"},
+    {file = "Shapely-1.7.1-cp37-cp37m-win_amd64.whl", hash = "sha256:35be1c5d869966569d3dfd4ec31832d7c780e9df760e1fe52131105685941891"},
+    {file = "Shapely-1.7.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:052eb5b9ba756808a7825e8a8020fb146ec489dd5c919e7d139014775411e688"},
+    {file = "Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:90a3e2ae0d6d7d50ff2370ba168fbd416a53e7d8448410758c5d6a5920646c1d"},
+    {file = "Shapely-1.7.1-cp38-cp38-win32.whl", hash = "sha256:a3774516c8a83abfd1ddffb8b6ec1b0935d7fe6ea0ff5c31a18bfdae567b4eba"},
+    {file = "Shapely-1.7.1-cp38-cp38-win_amd64.whl", hash = "sha256:6593026cd3f5daaea12bcc51ae5c979318070fefee210e7990cb8ac2364e79a1"},
+    {file = "Shapely-1.7.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:617bf046a6861d7c6b44d2d9cb9e2311548638e684c2cd071d8945f24a926263"},
+    {file = "Shapely-1.7.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:b40cc7bb089ae4aa9ddba1db900b4cd1bce3925d2a4b5837b639e49de054784f"},
+    {file = "Shapely-1.7.1-cp39-cp39-win32.whl", hash = "sha256:2df5260d0f2983309776cb41bfa85c464ec07018d88c0ecfca23d40bfadae2f1"},
+    {file = "Shapely-1.7.1-cp39-cp39-win_amd64.whl", hash = "sha256:a5c3a50d823c192f32615a2a6920e8c046b09e07a58eba220407335a9cd2e8ea"},
+    {file = "Shapely-1.7.1.tar.gz", hash = "sha256:1641724c1055459a7e2b8bbe47ba25bdc89554582e62aec23cb3f3ca25f9b129"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},

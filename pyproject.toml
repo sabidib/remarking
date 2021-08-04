@@ -24,13 +24,14 @@ classifiers = [
 python = "^3.7"
 SQLAlchemy = "^1.4.20"
 python-dateutil = "^2.8.1"
-rmapy = "0.3.0"
+rmapy = "0.3.1"
 click = "^8.0.1"
 halo = "^0.0.31"
 tabulate = "^0.8.9"
 click-help-colors = "^0.9.1"
 Sphinx = { version="^4.1.1", optional=true}
 furo = { version="^2021.7.5-beta.38", optional=true}
+remarks = {path = "../remarkable-backup/remarks"}
 
 [tool.poetry.scripts]
 remarking = 'remarking.cli.cli:command_line'
