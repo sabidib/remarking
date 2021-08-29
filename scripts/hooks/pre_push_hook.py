@@ -20,10 +20,13 @@ def get_changed_files_since_remote_master() -> List[str]:
     local_branch = local_repo.active_branch
     common_ancestor = local_repo.merge_base(local_branch, remote_master)[0]
 
+    assert common_ancestor is not None, "Could not find common ancestor to master for this branch."
     diffs = common_ancestor.diff(local_branch.commit)
+    working_dir = local_repo.working_dir
+    assert working_dir is not None, "Could not determine working directory for local repo"
 
     return [
-        os.path.join(local_repo.working_dir, changed_file.b_path)
+        os.path.join(working_dir, changed_file.b_path)
         for changed_file in diffs
         if not changed_file.deleted_file and is_valid_python_file(changed_file.b_path)
     ]
@@ -100,6 +103,7 @@ def get_uncommited_files() -> List[str]:
     local_repo = git.repo.Repo(".")
     repo_cwd = local_repo.working_dir
     diff_list = local_repo.index.diff(None)
+    assert repo_cwd is not None, "Could not determine working directory for local repo"
     return [
         os.path.join(repo_cwd, diff.b_path) for diff in
         diff_list
@@ -109,13 +113,14 @@ def get_uncommited_files() -> List[str]:
 def main() -> None:
     """ Main entrypoint"""
     colorama.init()
-    repo_cwd = git.repo.Repo(".").working_dir
+    repo_cwd = str(git.repo.Repo(".").working_dir)
     changed_files = get_changed_files_since_remote_master()
     if len(changed_files) != 0:
         print("Checking:")
         for path in changed_files:
             print(f"    {os.path.relpath(path, repo_cwd)}")
         print()
+        assert repo_cwd is not None, "Could not determine working directory for local repository"
         run_autofix(changed_files, repo_cwd)
         run_mypy(changed_files, repo_cwd)
         run_pylint(changed_files, repo_cwd)
