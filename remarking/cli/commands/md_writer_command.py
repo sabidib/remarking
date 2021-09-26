@@ -68,10 +68,7 @@ class MDWriterCommand(WriterCommand):
 
     def long_description(self) -> str:
         """ The long description for your command. Shown when running ``--help`` """
-        return """
-        
-        Returns documents and highlights as a Markdown document
-        """
+        return "Returns documents and highlights as a Markdown document"
 
     def short_description(self) -> str:
         """ The short description of your command. """
