@@ -25,7 +25,7 @@ To set up a development environment, please follow these steps:
 2. Prepare the development environment:
 
    ```
-   scripts/setup_develpment
+   scripts/setup_development
    ```
 
 3. Run `poetry install` to install dependencies.
