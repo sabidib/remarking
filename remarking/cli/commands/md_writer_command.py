@@ -1,14 +1,10 @@
 import typing as T
 from typing import List
 
-from remarking import Writer
-from remarking import WriterCommand
-from remarking import ClickOption
-from remarking import CommandLineLogger
-from remarking import Highlight
-from remarking import Document
-
 import click
+
+from remarking import (ClickOption, CommandLineLogger, Document, Highlight,
+                       Writer, WriterCommand)
 
 
 class MDWriter(Writer):
@@ -39,8 +35,6 @@ class MDWriter(Writer):
                         md_string.append(f'> "{highlight.text}"')
 
         logger.output_result("\n\n".join(md_string) + "\n")
-
-
 
 
 class MDWriterCommand(WriterCommand):
