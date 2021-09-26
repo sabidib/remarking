@@ -72,7 +72,7 @@ class MDWriterCommand(WriterCommand):
 
     def short_description(self) -> str:
         """ The short description of your command. """
-        return "Output results as a MD document"
+        return "Output results as markdown"
 
     def writer(self,
                documents: List[Document],
