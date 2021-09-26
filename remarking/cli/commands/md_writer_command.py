@@ -27,12 +27,12 @@ class MDWriter(Writer):
         """ Write to output. Invoked by remarking after extraction is ran on documents. """
         md_string = []
         for document in self.documents:
-            """ Write document name as the heading """
+            # Write document name as the heading
             md_string.append("# " + document.name)
 
             for highlight in self.highlights:
                 if highlight.document_id == document.id:
-                    """ Write highlight text as blockquote with page number in brackets at the end """
+                    # Write highlight text as blockquote with page number in brackets at the end
                     if self.add_pages:
                         md_string.append(f'> "{highlight.text}" (p. {highlight.page_number})')
                     else:
