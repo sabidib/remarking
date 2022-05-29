@@ -38,7 +38,7 @@ Once you have some highlighted text you can start extracting it.
 
 .. note::
 
-   Remarking requires a one-time authorization token from `<https://my.remarkable.com/device/connect/desktop>`_
+   Remarking requires a one-time authorization token from `<https://my.remarkable.com/device/desktop/connect>`_
    in order to access the documents on the reMarkable cloud.
 
    You will be prompted to enter the token if ``remarking`` is not able to authorize with the cloud.
